@@ -1,0 +1,13 @@
+apiVersion: cert-manager-io/v1
+kind: Certificate
+metadata: 
+  name: the-mart-dev-tls
+spec:
+  secretName: the-mart-dev
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: themart.dev
+  dnsNames:
+    - themart.dev
+    - www.themart.dev
